@@ -1,2 +1,3 @@
-# countdown-reactjs
-A countdown created in React JS - Video by: Rocketseat
+# Countdown in REACT JS
+[Video by: Rocketseat](https://www.youtube.com/watch?v=qcIhUoBZaHg&list=TLPQMjMwMjIwMjLGOYeDYKHKXA)
+

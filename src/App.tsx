@@ -23,9 +23,9 @@ function App() {
 
   return (
     <div className="App">
-      <span id="minutes">{minutes.toString().padStart(2, "0")}</span>
+      <span id="minutes">{String(minutes).padStart(2, "0")}</span>
       <span>:</span>
-      <span id="seconds">{seconds.toString().padStart(2, "0")}</span>
+      <span id="seconds">{String(seconds).padStart(2, "0")}</span>
     </div>
   )
 }

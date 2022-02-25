@@ -55,8 +55,8 @@ function App() {
           <g transform="translate(163.37721252441406, -4.155426025390625)">
             <defs>
               <linearGradient id="gradient1" x1="0%" y1="0%" x2="0%" y2="100%">
-                <stop offset="0%" stopColor="rgb(194, 229, 156)"></stop>
-                <stop offset="100%" stopColor="rgb(100, 179, 244)"></stop>
+                <stop offset="0%" stopColor="rgb(238, 205, 163)"></stop>
+                <stop offset="100%" stopColor="rgb(239, 98, 159)"></stop>
               </linearGradient>
             </defs>
             <path fill="url(#gradient1)">

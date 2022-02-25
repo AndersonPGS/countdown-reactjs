@@ -49,3 +49,7 @@ body {
   right: -210px;
   top: 400px;
 }
+
+.blur {
+  filter: blur(50px);
+}

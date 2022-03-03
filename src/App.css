@@ -72,7 +72,8 @@ body {
   background: rgb(255, 195, 113);
   border: none;
   height: 80px;
-  width: 20%;
+  width: 30%;
+  min-width: 300px;
   border-radius: 50px;
   font-size: 1.5rem;
   /* text-transform: uppercase; */

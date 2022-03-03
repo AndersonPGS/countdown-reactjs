@@ -2,7 +2,7 @@ import { useEffect, useState } from 'react'
 import './App.css'
 import notificationSound from '../src/notification.mp3'
 
-const COUNTDOWN_INICIAL_TIME_IN_SECONDS = 25 // 25 minutes
+const COUNTDOWN_INICIAL_TIME_IN_SECONDS = 25 * 60 // 25 minutes
 
 function App() {
 

@@ -14,8 +14,9 @@ A countdown created in React JS - [Based in video from: Rocketseat](https://www.
  - [x] Sound on notification
 
 ## Technologies used
+- ReactJS
 - Vite 
 - Vercel
 - Typescript
-- yarn
-- git
+- Yarn
+- Git

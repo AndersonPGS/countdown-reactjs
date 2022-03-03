@@ -19,22 +19,6 @@ body {
   color: #abb2bf;
 }
 
-.App .main {
-  height: 90%;
-  width: 90%;
-  background-color: rgba(0, 0, 0, .2);
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  border-radius: 25px;
-  backdrop-filter: blur(15px);
-}
-
-.App span {
-  font-weight: 700;
-  font-size: 10rem;
-}
-
 .blob {
   position: absolute;
   width: 900px;
@@ -52,4 +36,55 @@ body {
 
 .blur {
   filter: blur(50px);
+}
+
+.App .main{
+  height: 90%;
+  width: 90%;
+  background-color: rgba(0, 0, 0, .2);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  border-radius: 25px;
+  backdrop-filter: blur(15px);
+}
+
+.App .main .countdown {
+  height: 75%;
+  display: flex;
+  align-items: center;
+}
+
+.App .main .countdown span {
+  font-weight: 700;
+  font-size: 10rem;
+}
+
+.App .main .buttons {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 80%;
+}
+
+.App .main .buttons button {
+  background: rgb(255, 195, 113);
+  border: none;
+  height: 80px;
+  width: 20%;
+  border-radius: 50px;
+  font-size: 1.5rem;
+  /* text-transform: uppercase; */
+  font-weight: 700;
+  color: #21252b;
+  transition: all .3s ease;
+}
+
+.App .main .buttons button:hover {
+  transform: scale(1.1);
+  cursor: pointer;
+  box-shadow: -3px 0px 52px -10px rgba(255, 195, 113,0.75);
+  -webkit-box-shadow: -3px 0px 52px -10px rgba(255, 195, 113,0.75);
+  -moz-box-shadow: -3px 0px 52px -10px rgba(255, 195, 113,0.75);
 }

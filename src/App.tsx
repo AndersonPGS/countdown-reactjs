@@ -1,22 +1,31 @@
 import { useEffect, useState } from 'react'
 import './App.css'
+import notificationSound from '../src/notification.mp3'
 
-const COUNTDOWN_INICIAL_TIME_IN_SECONDS = 25 * 60 // 25 minutes
+const COUNTDOWN_INICIAL_TIME_IN_SECONDS = 25 // 25 minutes
 
 function App() {
 
   const [secondsAmount, setSecondsAmount] = useState(COUNTDOWN_INICIAL_TIME_IN_SECONDS);
 
+  const [isPaused, setIsPaused] = useState(false);
+  const [isEnded, setIsEnded] = useState(false);
+
   useEffect(() => {
-    if (secondsAmount === 0) {
+    if (secondsAmount === 0 && isEnded !== true) {
+      new Audio(notificationSound).play();
       alert("Finalizado.");
+      setIsEnded(true);
       return;
     }
 
-    setTimeout(() => {
-      setSecondsAmount(state => state - 1);
-    }, 1000);
-  }, [secondsAmount]);
+    if (isPaused === false) {
+      setTimeout(() => {
+        setSecondsAmount(state => state - 1);
+        setIsEnded(false);
+      }, 1000);
+    }
+  }, [secondsAmount, isPaused]);
 
   const minutes = Math.floor(secondsAmount / 60);
   const seconds = secondsAmount % 60;
@@ -132,9 +141,16 @@ function App() {
         </svg>
       </div>
       <div className="main">
-        <span id="minutes">{String(minutes).padStart(2, "0")}</span>
-        <span>:</span>
-        <span id="seconds">{String(seconds).padStart(2, "0")}</span>
+        <div className="countdown">
+          <span id="minutes">{String(minutes).padStart(2, "0")}</span>
+          <span>:</span>
+          <span id="seconds">{String(seconds).padStart(2, "0")}</span>
+        </div>
+        <div className="buttons">
+          {isPaused && !isEnded && <button onClick={() => setIsPaused(false)}>Continuar</button>}
+          {isPaused !== true && !isEnded && <button onClick={() => setIsPaused(true)}>Pausar</button>}
+          {isEnded && <button onClick={() => setSecondsAmount(COUNTDOWN_INICIAL_TIME_IN_SECONDS)}>Começar</button>}
+        </div>
       </div>
     </div>
   )

@@ -2,7 +2,7 @@ import { useEffect, useState } from 'react'
 import './App.css'
 import notificationSound from '../src/notification.mp3'
 
-const COUNTDOWN_INICIAL_TIME_IN_SECONDS = 25 * 60 // 25 minutes
+const COUNTDOWN_INICIAL_TIME_IN_SECONDS = 25 // 25 minutes
 
 function App() {
 
@@ -12,14 +12,14 @@ function App() {
   const [isEnded, setIsEnded] = useState(false);
 
   useEffect(() => {
-    if (secondsAmount === 0 && isEnded !== true) {
+    if (secondsAmount <= 0 && !isEnded) {
       new Audio(notificationSound).play();
-      alert("Finalizado.");
       setIsEnded(true);
+      alert("Finalizado.");
       return;
     }
 
-    if (isPaused === false) {
+    if (!isPaused) {
       setTimeout(() => {
         setSecondsAmount(state => state - 1);
         setIsEnded(false);
@@ -148,10 +148,11 @@ function App() {
         </div>
         <div className="buttons">
           {isPaused && !isEnded && <button onClick={() => setIsPaused(false)}>Continuar</button>}
-          {isPaused !== true && !isEnded && <button onClick={() => setIsPaused(true)}>Pausar</button>}
+          {!isPaused && !isEnded && <button onClick={() => setIsPaused(true)}>Pausar</button>}
           {isEnded && <button onClick={() => setSecondsAmount(COUNTDOWN_INICIAL_TIME_IN_SECONDS)}>Começar</button>}
         </div>
       </div>
+      <a href="https://github.com/AndersonPGS">AndersonPGS</a>
     </div>
   )
 }

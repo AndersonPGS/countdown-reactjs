@@ -15,6 +15,7 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
+  flex-direction: column;
   background-color: #21252b;
   color: #abb2bf;
 }
@@ -52,6 +53,7 @@ body {
   flex-direction: column;
   border-radius: 25px;
   backdrop-filter: blur(15px);
+  margin-bottom: 20px;
 }
 
 .App .main .countdown {
@@ -97,4 +99,9 @@ body {
   box-shadow: -3px 0px 52px -10px rgba(255, 195, 113,0.75);
   -webkit-box-shadow: -3px 0px 52px -10px rgba(255, 195, 113,0.75);
   -moz-box-shadow: -3px 0px 52px -10px rgba(255, 195, 113,0.75);
+}
+
+.App a {
+  text-decoration: none;
+  color: #e7e7e717;
 }

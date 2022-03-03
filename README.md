@@ -12,3 +12,10 @@ A countdown created in React JS - [Based in video from: Rocketseat](https://www.
  - [x] Simple animations
  - [x] Notification when the countdown ended
  - [x] Sound on notification
+
+##Technologies used
+- Vite 
+- Vercel
+- Typescript
+- yarn
+- git

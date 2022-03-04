@@ -16,90 +16,89 @@ body {
   flex-direction: column;
   background-color: #21252b;
   color: #abb2bf;
-}
 
-.blob {
-  position: absolute;
-  width: 900px;
-  height: 900px;
-  left: -210px;
-}
+  .blob {
+    position: absolute;
+    width: 900px;
+    height: 900px;
+    left: -210px;
+  }
 
-.blob1 {
-  position: absolute;
-  width: 700px;
-  height: 700px;
-  right: -210px;
-  top: 400px;
-}
+  .blob1 {
+    position: absolute;
+    width: 700px;
+    height: 700px;
+    right: -210px;
+    top: 400px;
+  }
 
-.blur {
-  filter: blur(50px);
-  transition: all 0.3s;
-}
-.blur:hover {
-  transform: scale(1.02);
-}
+  .blur {
+    filter: blur(50px);
+    transition: all 0.3s;
+    &:hover {
+      transform: scale(1.02);
+    }
+  }
 
-.App .main {
-  height: 90%;
-  width: 90%;
-  background-color: rgba(0, 0, 0, 0.2);
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-  border-radius: 25px;
-  backdrop-filter: blur(15px);
-  margin-bottom: 20px;
-}
+  a {
+    text-decoration: none;
+    color: #e7e7e717;
+  }
 
-.App .main .countdown {
-  height: 75%;
-  display: flex;
-  align-items: center;
-  transition: all 0.3s;
-}
+  .main {
+    height: 90%;
+    width: 90%;
+    background-color: rgba(0, 0, 0, 0.2);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    border-radius: 25px;
+    backdrop-filter: blur(15px);
+    margin-bottom: 20px;
 
-.App .main .countdown:hover {
-  transform: scale(1.02);
-}
+    .countdown {
+      height: 75%;
+      display: flex;
+      align-items: center;
+      transition: all 0.3s;
+      &:hover {
+        transform: scale(1.02);
+      }
 
-.App .main .countdown span {
-  font-weight: 700;
-  font-size: 10rem;
-}
+      span {
+        font-weight: 700;
+        font-size: 10rem;
+      }
+    }
 
-.App .main .buttons {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width: 80%;
-}
+    .buttons {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 80%;
 
-.App .main .buttons button {
-  background: rgb(255, 195, 113);
-  border: none;
-  height: 80px;
-  width: 30%;
-  min-width: 300px;
-  border-radius: 50px;
-  font-size: 1.5rem;
-  /* text-transform: uppercase; */
-  font-weight: 700;
-  color: #21252b;
-  transition: all 0.3s ease;
-}
+      button {
+        background: rgb(255, 195, 113);
+        border: none;
+        height: 80px;
+        width: 30%;
+        min-width: 300px;
+        border-radius: 50px;
+        font-size: 1.5rem;
+        /* text-transform: uppercase; */
+        font-weight: 700;
+        color: #21252b;
+        transition: all 0.3s ease;
 
-.App .main .buttons button:hover {
-  transform: scale(1.1);
-  cursor: pointer;
-  box-shadow: -3px 0px 52px -10px rgba(255, 195, 113, 0.75);
-  -webkit-box-shadow: -3px 0px 52px -10px rgba(255, 195, 113, 0.75);
-  -moz-box-shadow: -3px 0px 52px -10px rgba(255, 195, 113, 0.75);
-}
-
-.App a {
-  text-decoration: none;
-  color: #e7e7e717;
+        &:hover {
+          transform: scale(1.1);
+          cursor: pointer;
+          box-shadow: -3px 0px 52px -10px rgba(255, 195, 113, 0.75);
+          -webkit-box-shadow: -3px 0px 52px -10px rgba(255, 195, 113, 0.75);
+          -moz-box-shadow: -3px 0px 52px -10px rgba(255, 195, 113, 0.75);
+        }
+      }
+    }
+  }
 }

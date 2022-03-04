@@ -18,5 +18,6 @@ A countdown created in React JS - [Based in video from: Rocketseat](https://www.
 - Vite 
 - Vercel
 - Typescript
+- Sass
 - Yarn
 - Git
